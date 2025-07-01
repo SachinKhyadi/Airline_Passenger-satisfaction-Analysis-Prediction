@@ -1,8 +1,10 @@
 # Airline_Passenger-satisfaction-Analysis-Prediction
 
+
 📌 Objective:
 
 The goal of this project is to analyze airline passenger satisfaction based on in-flight service metrics, demographic details, and travel-related features. The project applies Exploratory Data Analysis (EDA) and builds classification models (Decision Tree and Neural Network) to predict whether a passenger is “satisfied” or “neutral or dissatisfied.”
+
 
 📁 Dataset:
 
@@ -18,7 +20,9 @@ R (rpart, caret, neuralnet, ggplot2, base plotting)
 
 Data cleaning, feature engineering, model training, and evaluation
 
+
 🔍 Key Steps:
+
 
 ✅ 1. Data Preprocessing
 
@@ -30,6 +34,7 @@ Converted id column into row names
 
 Ensured consistent feature alignment between training and test sets
 
+
 ✅ 2. Exploratory Data Analysis (EDA)
 
 Pie Charts: Showed satisfaction split by Customer Type, Gender, Class, and Travel Type
@@ -39,6 +44,7 @@ Bar Charts: Compared mean service ratings across satisfied vs. dissatisfied pass
 Boxplots: Analyzed age and flight distance variations by satisfaction level
 
 Heatmap: Revealed strong correlation between arrival and departure delays
+
 
 ✅ 3. Modeling: 
 
@@ -50,6 +56,7 @@ Identified key predictors: Online.boarding, Inflight.wifi.service, Type.of.Trave
 Applied cross-validation and cost-complexity pruning to optimize the tree
 
 Evaluated performance using confusionMatrix
+
 
 ✅ 4. Modeling:
 
@@ -83,6 +90,7 @@ Flight distance and age show mild influence, with longer flights and older passe
 
 
 🧠 Conclusion
+
 
 This project demonstrates how to combine EDA, interpretable machine learning, and model validation techniques to uncover the drivers of passenger satisfaction. 
 
