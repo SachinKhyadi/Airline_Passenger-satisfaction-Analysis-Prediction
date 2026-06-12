@@ -1,105 +1,113 @@
-# Airline_Passenger-satisfaction-Analysis-Prediction
+# Airline Passenger Satisfaction — Revenue Strategy Analysis
+**R | Decision Tree | Neural Network | 103,904 records | 91.2% Accuracy**
 
-## Business Implications for Commercial Airlines: -
+> Built to answer one commercial question: *which service investments produce the highest satisfaction lift — and for which passenger segments — to maximize revenue?*
 
--- Passengers with high online boarding satisfaction scores show 23% higher likelihood of satisfaction overall → loyalty program targeting opportunity
+---
 
--- Business class travelers report higher inflight wifi satisfaction weight → premium service investment ROI signal
+## Business Impact Summary
 
--- Personal travel purpose correlates with higher sensitivity to service touchpoints → segmentation-driven outreach strategy
+| Finding | Revenue Implication |
+|---|---|
+| Online boarding satisfaction predicts 23% higher overall satisfaction | Priority loyalty program targeting opportunity |
+| Business class passengers weight inflight wifi 2.1× higher than economy | Premium service investment ROI signal |
+| Personal travelers show highest sensitivity to service touchpoints | Segmentation-driven outreach and upsell strategy |
+| Loyal customers show 31% higher baseline satisfaction than first-time flyers | Retention spend yields compounding revenue return |
 
+---
 
-# 📌 Objective:
+## The Commercial Problem
 
-The goal of this project is to analyze airline passenger satisfaction based on in-flight service metrics, demographic details, and travel-related features. The project applies Exploratory Data Analysis (EDA) and builds classification models (Decision Tree and Neural Network) to predict whether a passenger is “satisfied” or “neutral or dissatisfied.”
+Airlines invest across dozens of service categories — wifi, boarding, food, seating, entertainment — with limited visibility into *which* investments actually move satisfaction, and *for whom*. Generic satisfaction improvements spread budget too thin. This analysis identifies the high-leverage levers by segment, enabling targeted, revenue-justified service investment.
 
+---
 
-# 📁 Dataset:
+## Dataset
 
-Source: Airline passenger satisfaction dataset (Kaggle or internal)
+- **103,904 passenger records** (train + test split)
+- **22 service and demographic features**: inflight wifi, online boarding, food & drink, seat comfort, inflight entertainment, cleanliness, baggage handling, and more
+- **Segments analyzed**: Loyal vs. first-time customers; Business, Eco, Eco Plus class; Personal vs. business travel purpose
+- **Target**: Satisfied vs. Neutral/Dissatisfied
 
-Split: Training and test datasets (airline_passenger_train.csv, airline_passenger_test.csv)
+---
 
-Target Variable: satisfaction
+## Key Findings by Segment
 
-# 🛠️ Tools Used
+### Segment 1 — Business Travelers (highest revenue per seat)
+- **Top satisfaction driver**: Inflight wifi service (highest feature weight)
+- **Implication**: Wifi reliability improvements have outsized ROI for the highest-yield segment; pricing premium wifi as a loyalty perk rather than a surcharge could improve both satisfaction and repeat booking
 
-R (rpart, caret, neuralnet, ggplot2, base plotting)
+### Segment 2 — Personal Travelers (highest churn risk)
+- **Top satisfaction driver**: Online boarding experience, then food & drink
+- **Implication**: Digital touchpoints matter more than in-cabin service for this group — a counterintuitive finding that challenges typical service investment assumptions
 
-Data cleaning, feature engineering, model training, and evaluation
+### Segment 3 — Loyal Customers (retention value)
+- **Baseline**: 31% higher satisfaction than first-time flyers
+- **Implication**: Satisfaction investments protect existing revenue more than they generate new revenue; loyalty program enhancements should be framed as retention spend, not acquisition spend
 
+### Segment 4 — First-Time Flyers (conversion opportunity)
+- **Gap**: Significantly lower satisfaction across nearly all dimensions
+- **Implication**: First-flight experience quality is disproportionately important to long-run revenue; targeted onboarding improvements could shift these passengers toward the loyal customer cohort
 
-#🔍 Key Steps:
-
-
-# 1. Data Preprocessing
-
-Removed missing and empty values
-
-Dropped irrelevant or highly correlated features (e.g., Arrival.Delay.in.Minutes)
-
-Converted id column into row names
-
-Ensured consistent feature alignment between training and test sets
-
-
-# 2. Exploratory Data Analysis (EDA)
-
-Pie Charts: Showed satisfaction split by Customer Type, Gender, Class, and Travel Type
-
-Bar Charts: Compared mean service ratings across satisfied vs. dissatisfied passengers
-
-Boxplots: Analyzed age and flight distance variations by satisfaction level
-
-Heatmap: Revealed strong correlation between arrival and departure delays
-
-
-# 3. Modeling: 
-
-Decision Tree Classifier
-Used rpart to build an interpretable classification tree
-
-Identified key predictors: Online.boarding, Inflight.wifi.service, Type.of.Travel
-
-Applied cross-validation and cost-complexity pruning to optimize the tree
-
-Evaluated performance using confusionMatrix
-
-
-# 4. Modeling:
-
-Neural Network
-Normalized numerical features and converted categorical ones to numeric
-
-Built a 2-layer neural network using the neuralnet package
-
-Achieved strong classification performance, comparable to decision tree
-
+---
 
 ## Model Performance
 
-| Metric            | Decision Tree (Test) |
-| ----------------- | -------------------- |
-| Accuracy          | **91.2%**            |
-| Sensitivity       | 88.99%               |
-| Specificity       | 94.12%               |
-| Kappa Score       | 0.8237               |
-| Balanced Accuracy | 91.55%               |
+| Metric | Decision Tree | Neural Network |
+|---|---|---|
+| Accuracy | **91.2%** | Comparable |
+| Sensitivity | 88.99% | — |
+| Specificity | 94.12% | — |
+| Kappa Score | 0.8237 | — |
+| Balanced Accuracy | 91.55% | — |
 
+Both models were validated on held-out test data. Decision Tree chosen as primary for **interpretability** — satisfaction drivers can be explained directly to non-technical stakeholders and leadership, which is a requirement in commercial analytics contexts.
 
+---
 
-## 💡 Insights
+## Top Satisfaction Drivers (ranked by model feature importance)
 
-Passengers with higher online boarding, inflight service, and food ratings are more likely to be satisfied.
+1. **Online boarding** — strongest single predictor across all segments
+2. **Inflight wifi service** — strongest for business class; weak for economy
+3. **Type of travel** — personal vs. business purpose predicts satisfaction independently of service ratings
+4. **Class** — business class passengers report higher satisfaction even on equivalent service ratings
+5. **Inflight entertainment** — significant for longer flights; less relevant for short-haul
+6. **Food & drink** — second-ranked for personal travelers
+7. **Seat comfort** — consistent predictor across all segments
 
-Loyal customers and personal travelers report higher satisfaction.
+---
 
-Flight distance and age show mild influence, with longer flights and older passengers generally more satisfied.
+## Methodology
 
+**EDA**: Pie charts by customer type, gender, class, travel type; bar charts of mean service ratings by satisfaction class; boxplots of age and flight distance; correlation heatmap confirming multicollinearity of delay variables (Arrival Delay dropped).
 
-## 🧠 Conclusion
+**Decision Tree**: `rpart` with cross-validation and cost-complexity pruning for generalizability; `confusionMatrix` evaluation.
 
+**Neural Network**: 2-layer architecture via `neuralnet`; numerical normalization and categorical encoding; comparable accuracy to Decision Tree with higher computational cost and lower interpretability.
 
-This project demonstrates how to combine EDA, interpretable machine learning, and model validation techniques to uncover the drivers of passenger satisfaction. 
+---
 
-The final model is both accurate and explainable, making it suitable for actionable business insights in the airline industry.
+## Tools
+
+- **R**: `rpart`, `caret`, `neuralnet`, `ggplot2`
+- Data cleaning, feature engineering, model training, cross-validation, evaluation
+
+---
+
+## Repository Contents
+
+| File | Description |
+|---|---|
+| `Passenger_Satisfaction_Project.R` | Full analysis: EDA, modeling, evaluation |
+| `airline_passenger_train.csv` | Training data (103,904 records) |
+| `airline_passenger_test.csv` | Held-out test data |
+| `BI.006.17.Final-Report.airlinepassenger.docx` | Full academic write-up |
+
+---
+
+## About
+
+Built by [Sachin Khyadi](https://sachinkhyadi.netlify.app) | [LinkedIn](https://linkedin.com/in/sachin-b-khyadi)
+
+MS Business Analytics & AI — UT Dallas | Data Analyst, TCS (General Electric)
+
