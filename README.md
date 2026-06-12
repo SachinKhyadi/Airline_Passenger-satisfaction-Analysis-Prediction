@@ -70,7 +70,7 @@ Both models were validated on held-out test data. Decision Tree chosen as primar
 1. **Online boarding** - strongest single predictor across all segments
 2. **Inflight wifi service** - strongest for business class; weak for economy
 3. **Type of travel** - personal vs. business purpose predicts satisfaction independently of service ratings
-4. **Class** — business class passengers report higher satisfaction even on equivalent service ratings
+4. **Class** - business class passengers report higher satisfaction even on equivalent service ratings
 5. **Inflight entertainment** - significant for longer flights; less relevant for short-haul
 6. **Food & drink** - second-ranked for personal travelers
 7. **Seat comfort** - consistent predictor across all segments
