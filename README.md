@@ -1,7 +1,7 @@
 # Airline Passenger Satisfaction — Revenue Strategy Analysis
 **R | Decision Tree | Neural Network | 103,904 records | 91.2% Accuracy**
 
-> Built to answer one commercial question: *which service investments produce the highest satisfaction lift — and for which passenger segments — to maximize revenue?*
+> Built to answer one commercial question: *which service investments produce the highest satisfaction lift — and for which passenger segments to maximize revenue?*
 
 ---
 
@@ -61,7 +61,7 @@ Airlines invest across dozens of service categories — wifi, boarding, food, se
 | Kappa Score | 0.8237 | — |
 | Balanced Accuracy | 91.55% | — |
 
-Both models were validated on held-out test data. Decision Tree chosen as primary for **interpretability** — satisfaction drivers can be explained directly to non-technical stakeholders and leadership, which is a requirement in commercial analytics contexts.
+Both models were validated on held-out test data. Decision Tree chosen as primary for **interpretability** satisfaction drivers can be explained directly to non-technical stakeholders and leadership, which is a requirement in commercial analytics contexts.
 
 ---
 
@@ -102,12 +102,4 @@ Both models were validated on held-out test data. Decision Tree chosen as primar
 | `airline_passenger_train.csv` | Training data (103,904 records) |
 | `airline_passenger_test.csv` | Held-out test data |
 | `BI.006.17.Final-Report.airlinepassenger.docx` | Full academic write-up |
-
----
-
-## About
-
-Built by [Sachin Khyadi](https://sachinkhyadi.netlify.app) | [LinkedIn](https://linkedin.com/in/sachin-b-khyadi)
-
-MS Business Analytics & AI — UT Dallas | Data Analyst, TCS (General Electric)
 
