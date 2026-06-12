@@ -1,7 +1,7 @@
-# Airline Passenger Satisfaction — Revenue Strategy Analysis
+# Airline Passenger Satisfaction & Revenue Strategy Analysis
 **R | Decision Tree | Neural Network | 103,904 records | 91.2% Accuracy**
 
-> Built to answer one commercial question: *which service investments produce the highest satisfaction lift — and for which passenger segments to maximize revenue?*
+> Built to answer one commercial question: *which service investments produce the highest satisfaction lift and for which passenger segments to maximize revenue?*
 
 ---
 
