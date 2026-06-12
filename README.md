@@ -18,7 +18,7 @@
 
 ## The Commercial Problem
 
-Airlines invest across dozens of service categories — wifi, boarding, food, seating, entertainment — with limited visibility into *which* investments actually move satisfaction, and *for whom*. Generic satisfaction improvements spread budget too thin. This analysis identifies the high-leverage levers by segment, enabling targeted, revenue-justified service investment.
+Airlines invest across dozens of service categories like wifi, boarding, food, seating, entertainment with limited visibility into *which* investments actually move satisfaction, and *for whom*. Generic satisfaction improvements spread budget too thin. This analysis identifies the high-leverage levers by segment, enabling targeted, revenue-justified service investment.
 
 ---
 
@@ -33,19 +33,19 @@ Airlines invest across dozens of service categories — wifi, boarding, food, se
 
 ## Key Findings by Segment
 
-### Segment 1 — Business Travelers (highest revenue per seat)
+### Segment 1 - Business Travelers (highest revenue per seat)
 - **Top satisfaction driver**: Inflight wifi service (highest feature weight)
 - **Implication**: Wifi reliability improvements have outsized ROI for the highest-yield segment; pricing premium wifi as a loyalty perk rather than a surcharge could improve both satisfaction and repeat booking
 
-### Segment 2 — Personal Travelers (highest churn risk)
+### Segment 2 - Personal Travelers (highest churn risk)
 - **Top satisfaction driver**: Online boarding experience, then food & drink
 - **Implication**: Digital touchpoints matter more than in-cabin service for this group — a counterintuitive finding that challenges typical service investment assumptions
 
-### Segment 3 — Loyal Customers (retention value)
+### Segment 3 - Loyal Customers (retention value)
 - **Baseline**: 31% higher satisfaction than first-time flyers
 - **Implication**: Satisfaction investments protect existing revenue more than they generate new revenue; loyalty program enhancements should be framed as retention spend, not acquisition spend
 
-### Segment 4 — First-Time Flyers (conversion opportunity)
+### Segment 4 - First-Time Flyers (conversion opportunity)
 - **Gap**: Significantly lower satisfaction across nearly all dimensions
 - **Implication**: First-flight experience quality is disproportionately important to long-run revenue; targeted onboarding improvements could shift these passengers toward the loyal customer cohort
 
@@ -67,13 +67,13 @@ Both models were validated on held-out test data. Decision Tree chosen as primar
 
 ## Top Satisfaction Drivers (ranked by model feature importance)
 
-1. **Online boarding** — strongest single predictor across all segments
-2. **Inflight wifi service** — strongest for business class; weak for economy
-3. **Type of travel** — personal vs. business purpose predicts satisfaction independently of service ratings
+1. **Online boarding** - strongest single predictor across all segments
+2. **Inflight wifi service** - strongest for business class; weak for economy
+3. **Type of travel** - personal vs. business purpose predicts satisfaction independently of service ratings
 4. **Class** — business class passengers report higher satisfaction even on equivalent service ratings
-5. **Inflight entertainment** — significant for longer flights; less relevant for short-haul
-6. **Food & drink** — second-ranked for personal travelers
-7. **Seat comfort** — consistent predictor across all segments
+5. **Inflight entertainment** - significant for longer flights; less relevant for short-haul
+6. **Food & drink** - second-ranked for personal travelers
+7. **Seat comfort** - consistent predictor across all segments
 
 ---
 
